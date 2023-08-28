@@ -5,8 +5,9 @@ Todolist is a simple web-based to-do list application that allows you to manage 
 ## Installation
 
 1. Clone or download the repository.
-2. Run the command `npm i` to install all the necessary node modules
-3. Your web app should be running on http://localhost:3000/
+2. Run the command `npm i` to install all the necessary node modules.
+3. Run the command `node app.js` or `nodemon app.js` (Make sure you have them installed.) 
+4. Now your web app should be running on http://localhost:3000/
 
 ## How to Use
 
@@ -17,13 +18,14 @@ Todolist is a simple web-based to-do list application that allows you to manage 
 
 ## Live Demo
 
-Try out the ToDo List WebApp [here](https://fine-lab-coat-fish.cyclic.app/).
+Try out the ToDo List WebApp [here](https://todo-list-webapp.onrender.com/).
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- Node.js
 - Express.js
-- MongoDB
 - EJS (Embedded JavaScript)
+- MongoDB
