@@ -18,7 +18,7 @@ mongoose.set('strictQuery', false);
 // Connect to MongoDB database
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://suvarna_bhide:suvarna_bhide@cluster0.5rjgpx9.mongodb.net/todolistDB");
+    const conn = await mongoose.connect(process.env.MONGODB_CONNECT_URI);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (err) {
     console.error(err);
