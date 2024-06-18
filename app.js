@@ -29,15 +29,14 @@ const connectDB = async () => {
 // Define Mongoose schemas and models
 const itemsSchema = new mongoose.Schema({ name: String });
 const Item = mongoose.model("Item", itemsSchema);
-const defaultItems = [ {
-  name: "Welcome to your todolist!",
-},
-{
-  name: "Hit the + button to add a new item.",
-},
-{
-  name: "<-- Hit this to delete an item.",
-},];
+const defaultItems = [
+  { name: "Welcome to your todolist!" },
+  { name: "Hit the + button to add a new item." },
+  { name: "<-- Hit this to delete an item." },
+  {
+    name: 'Create a custom list by adding the name to the URL.<br>(e.g., <a href="https://todo-list-webapp.onrender.com/SCHOOL" style="color: mediumvioletred; font-weight: 500;">https://todo-list-webapp.onrender.com/<span style="font-weight: bold;">SCHOOL</span></a>).',
+  },
+];
 const listSchema = new mongoose.Schema({ name: String, items: [itemsSchema] });
 const List = mongoose.model("List", listSchema);
 
@@ -127,4 +126,3 @@ connectDB().then(() => {
     console.log(`Server running on port ${port}`);
   });
 });
-

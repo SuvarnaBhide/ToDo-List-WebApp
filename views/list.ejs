@@ -9,7 +9,16 @@
   <form action="/delete" method="post">
     <div class="item">
       <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
-      <p><%= item.name %></p>
+      <% if (item.name.includes("Create a custom list by adding the name to the URL")) { %>
+        <div class="text-image-container">
+          <p>
+            <%- item.name %>
+            <img src="/images/custom_list_example_1.png" height="30" width="250">
+          </p>
+        </div>
+      <% } else { %>
+        <p><%- item.name %></p>
+      <% } %>
     </div>
     <input type="hidden" name="listName" value="<%= listTitle %>">
   </form>
