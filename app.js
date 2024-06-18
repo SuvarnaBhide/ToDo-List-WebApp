@@ -34,8 +34,8 @@ const defaultItems = [
   { name: "Hit the + button to add a new item." },
   { name: "<-- Hit this to delete an item." },
   {
-    name: 'Create a custom list by adding the name to the URL.<br>(e.g., <a href="https://todo-list-webapp.onrender.com/SCHOOL" style="color: mediumvioletred; font-weight: 500;">https://todo-list-webapp.onrender.com/<span style="font-weight: bold;">SCHOOL</span></a>).',
-  },
+    name: 'Create a custom list by adding the name to the URL.<br>(e.g., <a href="https://todo-list-webapp.onrender.com/SCHOOL" style="color: #895BB3; font-weight: 500;">https://todo-list-webapp.onrender.com/<span style="font-weight: bold;">SCHOOL</span></a>).',
+  }  
 ];
 const listSchema = new mongoose.Schema({ name: String, items: [itemsSchema] });
 const List = mongoose.model("List", listSchema);
